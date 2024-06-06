@@ -7,7 +7,6 @@ services:
     volumes:
       - clickhouse_data01:/var/lib/clickhouse
       - ./configs/clickhouse01/config.xml:/etc/clickhouse-server/config.d/cluster.xml:ro
-      - ./configs/server-config.xml:/etc/clickhouse-server/config.xml:ro
       - ./configs/server-users.xml:/etc/clickhouse-server/users.xml:ro
     ports:
       - "8123:8123"
@@ -21,7 +20,6 @@ services:
     volumes:
       - clickhouse_data02:/var/lib/clickhouse
       - ./configs/clickhouse02/config.xml:/etc/clickhouse-server/config.d/cluster.xml:ro
-      - ./configs/server-config.xml:/etc/clickhouse-server/config.xml:ro
       - ./configs/server-users.xml:/etc/clickhouse-server/users.xml:ro
     ports:
       - "8124:8123"
@@ -35,7 +33,6 @@ services:
     volumes:
       - clickhouse_data03:/var/lib/clickhouse
       - ./configs/clickhouse03/config.xml:/etc/clickhouse-server/config.d/cluster.xml:ro
-      - ./configs/server-config.xml:/etc/clickhouse-server/config.xml:ro
       - ./configs/server-users.xml:/etc/clickhouse-server/users.xml:ro
     ports:
       - "8125:8123"
